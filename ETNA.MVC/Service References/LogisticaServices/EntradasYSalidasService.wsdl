@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EntradasYSalidasService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:6078/LO/EntradasYSalidasService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:6078/LO/EntradasYSalidasService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:6078/LO/EntradasYSalidasService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ETNA.DTOs.LO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEntradasYSalidasService_ObtenerAlmacenesPorEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAlmacenesPorEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_ObtenerAlmacenesPorEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAlmacenesPorEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_ObtenerSolicitudesEntrada_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerSolicitudesEntrada" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_ObtenerSolicitudesEntrada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerSolicitudesEntradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_ObtenerSolicitudEntrada_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerSolicitudEntrada" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_ObtenerSolicitudEntrada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerSolicitudEntradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_GenerarGuiaEntrada_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarGuiaEntrada" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_GenerarGuiaEntrada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarGuiaEntradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_RechazarGuiaEntrada_InputMessage">
+    <wsdl:part name="parameters" element="tns:RechazarGuiaEntrada" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_RechazarGuiaEntrada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechazarGuiaEntradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_ObtenerSolicitudesSalida_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerSolicitudesSalida" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_ObtenerSolicitudesSalida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerSolicitudesSalidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_ObtenerSolicitudSalida_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerSolicitudSalida" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_ObtenerSolicitudSalida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerSolicitudSalidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_GenerarGuiaSalida_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarGuiaSalida" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_GenerarGuiaSalida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarGuiaSalidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_RechazarGuiaSalida_InputMessage">
+    <wsdl:part name="parameters" element="tns:RechazarGuiaSalida" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_RechazarGuiaSalida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechazarGuiaSalidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_ObtenerEmpleados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="IEntradasYSalidasService_ObtenerEmpleados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEntradasYSalidasService">
+    <wsdl:operation name="ObtenerAlmacenesPorEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntradasYSalidasService/ObtenerAlmacenesPorEmpleado" message="tns:IEntradasYSalidasService_ObtenerAlmacenesPorEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntradasYSalidasService/ObtenerAlmacenesPorEmpleadoResponse" message="tns:IEntradasYSalidasService_ObtenerAlmacenesPorEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSolicitudesEntrada">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntradasYSalidasService/ObtenerSolicitudesEntrada" message="tns:IEntradasYSalidasService_ObtenerSolicitudesEntrada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntradasYSalidasService/ObtenerSolicitudesEntradaResponse" message="tns:IEntradasYSalidasService_ObtenerSolicitudesEntrada_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSolicitudEntrada">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntradasYSalidasService/ObtenerSolicitudEntrada" message="tns:IEntradasYSalidasService_ObtenerSolicitudEntrada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntradasYSalidasService/ObtenerSolicitudEntradaResponse" message="tns:IEntradasYSalidasService_ObtenerSolicitudEntrada_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarGuiaEntrada">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntradasYSalidasService/GenerarGuiaEntrada" message="tns:IEntradasYSalidasService_GenerarGuiaEntrada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntradasYSalidasService/GenerarGuiaEntradaResponse" message="tns:IEntradasYSalidasService_GenerarGuiaEntrada_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechazarGuiaEntrada">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntradasYSalidasService/RechazarGuiaEntrada" message="tns:IEntradasYSalidasService_RechazarGuiaEntrada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntradasYSalidasService/RechazarGuiaEntradaResponse" message="tns:IEntradasYSalidasService_RechazarGuiaEntrada_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSolicitudesSalida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntradasYSalidasService/ObtenerSolicitudesSalida" message="tns:IEntradasYSalidasService_ObtenerSolicitudesSalida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntradasYSalidasService/ObtenerSolicitudesSalidaResponse" message="tns:IEntradasYSalidasService_ObtenerSolicitudesSalida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSolicitudSalida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntradasYSalidasService/ObtenerSolicitudSalida" message="tns:IEntradasYSalidasService_ObtenerSolicitudSalida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntradasYSalidasService/ObtenerSolicitudSalidaResponse" message="tns:IEntradasYSalidasService_ObtenerSolicitudSalida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarGuiaSalida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntradasYSalidasService/GenerarGuiaSalida" message="tns:IEntradasYSalidasService_GenerarGuiaSalida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntradasYSalidasService/GenerarGuiaSalidaResponse" message="tns:IEntradasYSalidasService_GenerarGuiaSalida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechazarGuiaSalida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntradasYSalidasService/RechazarGuiaSalida" message="tns:IEntradasYSalidasService_RechazarGuiaSalida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntradasYSalidasService/RechazarGuiaSalidaResponse" message="tns:IEntradasYSalidasService_RechazarGuiaSalida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpleados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntradasYSalidasService/ObtenerEmpleados" message="tns:IEntradasYSalidasService_ObtenerEmpleados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntradasYSalidasService/ObtenerEmpleadosResponse" message="tns:IEntradasYSalidasService_ObtenerEmpleados_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEntradasYSalidasService" type="tns:IEntradasYSalidasService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerAlmacenesPorEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IEntradasYSalidasService/ObtenerAlmacenesPorEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSolicitudesEntrada">
+      <soap:operation soapAction="http://tempuri.org/IEntradasYSalidasService/ObtenerSolicitudesEntrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSolicitudEntrada">
+      <soap:operation soapAction="http://tempuri.org/IEntradasYSalidasService/ObtenerSolicitudEntrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarGuiaEntrada">
+      <soap:operation soapAction="http://tempuri.org/IEntradasYSalidasService/GenerarGuiaEntrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechazarGuiaEntrada">
+      <soap:operation soapAction="http://tempuri.org/IEntradasYSalidasService/RechazarGuiaEntrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSolicitudesSalida">
+      <soap:operation soapAction="http://tempuri.org/IEntradasYSalidasService/ObtenerSolicitudesSalida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSolicitudSalida">
+      <soap:operation soapAction="http://tempuri.org/IEntradasYSalidasService/ObtenerSolicitudSalida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarGuiaSalida">
+      <soap:operation soapAction="http://tempuri.org/IEntradasYSalidasService/GenerarGuiaSalida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechazarGuiaSalida">
+      <soap:operation soapAction="http://tempuri.org/IEntradasYSalidasService/RechazarGuiaSalida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpleados">
+      <soap:operation soapAction="http://tempuri.org/IEntradasYSalidasService/ObtenerEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EntradasYSalidasService">
+    <wsdl:port name="BasicHttpBinding_IEntradasYSalidasService" binding="tns:BasicHttpBinding_IEntradasYSalidasService">
+      <soap:address location="http://localhost:6078/LO/EntradasYSalidasService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

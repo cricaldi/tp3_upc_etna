@@ -1,0 +1,19 @@
+﻿@model ETNA.MVC.Models.LO.FiltradoSolicitudesSalidaViewModel
+
+@{
+    ViewBag.Title = "Solicitudes";
+}
+
+<h2>Solicitudes de Salida Aprobadas</h2>
+
+@Html.Partial("_ListaSolicitudSalida", Model.ListaInicial)
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var message = '@ViewBag.Message';
+            if (message)
+                toastr["success"](message);
+        });
+    </script>
+}

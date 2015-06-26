@@ -1,0 +1,11 @@
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\ETNA.DAL.dll.config
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\ETNA.DAL.dll
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\ETNA.DAL.pdb
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\EntityFramework.dll
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\EntityFramework.xml
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\obj\Debug\ETNA.DAL.dll
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\obj\Debug\ETNA.DAL.pdb
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\ETNA.Domain.dll
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\ETNA.Domain.pdb
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\obj\Debug\ETNA.DAL.csprojResolveAssemblyReference.cache

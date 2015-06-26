@@ -1,0 +1,5 @@
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DTOs\bin\Debug\ETNA.DTOs.dll
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DTOs\bin\Debug\ETNA.DTOs.pdb
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DTOs\obj\Debug\ETNA.DTOs.dll
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DTOs\obj\Debug\ETNA.DTOs.pdb
+C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DTOs\obj\Debug\ETNA.DTOs.csprojResolveAssemblyReference.cache
