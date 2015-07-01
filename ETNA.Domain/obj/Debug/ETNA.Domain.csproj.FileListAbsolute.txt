@@ -2,3 +2,8 @@ C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.Domain\bin
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.Domain\bin\Debug\ETNA.Domain.pdb
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.Domain\obj\Debug\ETNA.Domain.dll
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.Domain\obj\Debug\ETNA.Domain.pdb
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.Domain\bin\Debug\ETNA.Domain.dll
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.Domain\bin\Debug\ETNA.Domain.pdb
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.Domain\obj\Debug\ETNA.Domain.csprojResolveAssemblyReference.cache
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.Domain\obj\Debug\ETNA.Domain.dll
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.Domain\obj\Debug\ETNA.Domain.pdb

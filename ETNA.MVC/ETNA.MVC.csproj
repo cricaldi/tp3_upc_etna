@@ -180,6 +180,12 @@
     <Compile Include="Controllers\LO\GuiaEntradaController.cs" />
     <Compile Include="Controllers\LO\GuiaSalidaController.cs" />
     <Compile Include="Controllers\LO\LogisticaController.cs" />
+    <Compile Include="Controllers\PV\FacturaController.cs" />
+    <Compile Include="Controllers\PV\InformeReclamoController.cs" />
+    <Compile Include="Controllers\PV\PlantillaController.cs" />
+    <Compile Include="Controllers\PV\PostVentaController.cs" />
+    <Compile Include="Controllers\PV\ProgramacionController.cs" />
+    <Compile Include="Controllers\PV\ReclamoController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -197,6 +203,11 @@
     <Compile Include="Models\LO\FiltradoSolicitudesEntradaViewModel.cs" />
     <Compile Include="Models\LO\ListaSolicitudEntradaViewModel.cs" />
     <Compile Include="Models\LO\SolicitudEntradaViewModel.cs" />
+    <Compile Include="Models\PV\FacturaDetalleViewModel.cs" />
+    <Compile Include="Models\PV\FacturaViewModel.cs" />
+    <Compile Include="Models\PV\PlantillaViewModel.cs" />
+    <Compile Include="Models\PV\ProgramacionViewModel.cs" />
+    <Compile Include="Models\PV\ReclamoViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\FabricacionServices\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -397,8 +408,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\themes\base\minified\images\" />
-    <Folder Include="Controllers\PV\" />
-    <Folder Include="Models\PV\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

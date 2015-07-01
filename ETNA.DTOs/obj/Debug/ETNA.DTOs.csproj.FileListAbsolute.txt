@@ -3,3 +3,8 @@ C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DTOs\bin\D
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DTOs\obj\Debug\ETNA.DTOs.dll
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DTOs\obj\Debug\ETNA.DTOs.pdb
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DTOs\obj\Debug\ETNA.DTOs.csprojResolveAssemblyReference.cache
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.DTOs\bin\Debug\ETNA.DTOs.dll
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.DTOs\bin\Debug\ETNA.DTOs.pdb
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.DTOs\obj\Debug\ETNA.DTOs.csprojResolveAssemblyReference.cache
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.DTOs\obj\Debug\ETNA.DTOs.dll
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.DTOs\obj\Debug\ETNA.DTOs.pdb

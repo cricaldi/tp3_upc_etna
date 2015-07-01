@@ -72,6 +72,10 @@
   <ItemGroup>
     <Content Include="FB\LotesService.svc" />
     <Content Include="LO\EntradasYSalidasService.svc" />
+    <Content Include="PV\Facturas.svc" />
+    <Content Include="PV\Plantillas.svc" />
+    <Content Include="PV\Programacion.svc" />
+    <Content Include="PV\Reclamos.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +88,22 @@
     </Compile>
     <Compile Include="LO\IEntradasYSalidasService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PV\Facturas.svc.cs">
+      <DependentUpon>Facturas.svc</DependentUpon>
+    </Compile>
+    <Compile Include="PV\IFacturas.cs" />
+    <Compile Include="PV\IPlantillas.cs" />
+    <Compile Include="PV\IProgramacion.cs" />
+    <Compile Include="PV\IReclamos.cs" />
+    <Compile Include="PV\Plantillas.svc.cs">
+      <DependentUpon>Plantillas.svc</DependentUpon>
+    </Compile>
+    <Compile Include="PV\Programacion.svc.cs">
+      <DependentUpon>Programacion.svc</DependentUpon>
+    </Compile>
+    <Compile Include="PV\Reclamos.svc.cs">
+      <DependentUpon>Reclamos.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -112,9 +132,7 @@
       <Name>ETNA.DTOs</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PV\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -12,3 +12,17 @@ C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.BL\obj\Deb
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.BL\obj\Debug\ETNA.BL.pdb
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.BL\bin\Debug\ETNA.Common.dll
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.BL\bin\Debug\ETNA.Common.pdb
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.BL.dll
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.BL.pdb
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\bin\Debug\EntityFramework.dll
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.Common.dll
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.DAL.dll
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.Domain.dll
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.Common.pdb
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.DAL.pdb
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.Domain.pdb
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\bin\Debug\EntityFramework.xml
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\obj\Debug\ETNA.BL.csprojResolveAssemblyReference.cache
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\obj\Debug\ETNA.BL.dll
+C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.BL\obj\Debug\ETNA.BL.pdb
