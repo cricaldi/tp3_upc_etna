@@ -404,6 +404,18 @@
     <Content Include="Views\GuiaSalida\Solicitudes.cshtml" />
     <Content Include="Views\GuiaSalida\Atender.cshtml" />
     <Content Include="Views\GuiaSalida\_ListaSolicitudSalida.cshtml" />
+    <Content Include="Views\Factura\Details.cshtml" />
+    <Content Include="Views\Factura\Index.cshtml" />
+    <Content Include="Views\Reclamo\Create.cshtml" />
+    <Content Include="Views\Reclamo\Details.cshtml" />
+    <Content Include="Views\Reclamo\Edit.cshtml" />
+    <Content Include="Views\Reclamo\Index.cshtml" />
+    <Content Include="Views\Programacion\Create.cshtml" />
+    <Content Include="Views\Programacion\Details.cshtml" />
+    <Content Include="Views\Programacion\Edit.cshtml" />
+    <Content Include="Views\Programacion\Index.cshtml" />
+    <Content Include="Views\PostVenta\Index.cshtml" />
+    <Content Include="Views\Plantilla\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
