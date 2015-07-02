@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ETNA.DTOs
 {
     [DataContract]
-    public class ProductoDTO
+    public class ProductoDto
     {
         [DataMember]
         public int Id { get; set; }

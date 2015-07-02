@@ -29,7 +29,7 @@
         <EntityTypeShape EntityType="ETNADbModel.Producto" Width="1.5" PointX="9" PointY="6.875" FillColor="LightGreen" />
         <EntityTypeShape EntityType="ETNADbModel.SolicitudEntrada" Width="1.5" PointX="0.5" PointY="5" />
         <AssociationConnector Association="ETNADbModel.GuiaEntradaSolicitudEntrada" />
-        <EntityTypeShape EntityType="ETNADbModel.DetalleSolicitudEntrada" Width="1.5" PointX="3.875" PointY="7.875" />
+        <EntityTypeShape EntityType="ETNADbModel.DetalleSolicitudEntrada" Width="2" PointX="3.875" PointY="7.875" />
         <AssociationConnector Association="ETNADbModel.SolicitudEntradaSolicitudEntradaProducto" ManuallyRouted="false" >
         </AssociationConnector>
         <AssociationConnector Association="ETNADbModel.ProductoSolicitudEntradaProducto" ManuallyRouted="false" >

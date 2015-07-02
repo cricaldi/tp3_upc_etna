@@ -5,6 +5,5 @@ C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.Common\obj
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.Common\obj\Debug\ETNA.Common.csprojResolveAssemblyReference.cache
 C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.Common\bin\Debug\ETNA.Common.dll
 C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.Common\bin\Debug\ETNA.Common.pdb
-C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.Common\obj\Debug\ETNA.Common.csprojResolveAssemblyReference.cache
 C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.Common\obj\Debug\ETNA.Common.dll
 C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.Common\obj\Debug\ETNA.Common.pdb

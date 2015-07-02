@@ -11,8 +11,6 @@ namespace ETNA.DTOs.LO
     public class DetalleSolicitudEntradaDto
     {
         [DataMember]
-        public int Id { get; set; }
-        [DataMember]
         public string NombreProducto { get; set; }
         [DataMember]
         public int Cantidad { get; set; }
