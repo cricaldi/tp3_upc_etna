@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="ETNADbModel.GuiaEntrada" Width="1.5" PointX="1.25" PointY="1.5" />
         <InheritanceConnector EntityType="ETNADbModel.GuiaEntrada" ManuallyRouted="false" >
         </InheritanceConnector>
-        <EntityTypeShape EntityType="ETNADbModel.GuiaSalida" Width="1.5" PointX="2.25" PointY="3.75" />
+        <EntityTypeShape EntityType="ETNADbModel.GuiaSalida" Width="1.5" PointX="2" PointY="3.75" />
         <InheritanceConnector EntityType="ETNADbModel.GuiaSalida" ManuallyRouted="false" >
         </InheritanceConnector>
         <EntityTypeShape EntityType="ETNADbModel.AjusteInventario" PointX="3.625" PointY="5.375" Width="1.5" />
@@ -26,7 +26,7 @@
         <AssociationConnector Association="ETNADbModel.EmpleadoUserProfile" />
         <AssociationConnector Association="ETNADbModel.EmpleadoAlmacen" />
         <AssociationConnector Association="ETNADbModel.EmpleadoDocumentoReferencia" />
-        <EntityTypeShape EntityType="ETNADbModel.Producto" Width="1.5" PointX="9.125" PointY="8.125" FillColor="LightGreen" />
+        <EntityTypeShape EntityType="ETNADbModel.Producto" Width="1.5" PointX="9" PointY="6.875" FillColor="LightGreen" />
         <EntityTypeShape EntityType="ETNADbModel.SolicitudEntrada" Width="1.5" PointX="0.5" PointY="5" />
         <AssociationConnector Association="ETNADbModel.GuiaEntradaSolicitudEntrada" />
         <EntityTypeShape EntityType="ETNADbModel.DetalleSolicitudEntrada" Width="1.5" PointX="3.875" PointY="7.875" />
@@ -43,15 +43,35 @@
         <EntityTypeShape EntityType="ETNADbModel.Lote" Width="1.5" PointX="12.5" PointY="8.875" FillColor="Red" />
         <EntityTypeShape EntityType="ETNADbModel.TipoLote" Width="1.5" PointX="16.25" PointY="8.875" FillColor="Red" />
         <AssociationConnector Association="ETNADbModel.LoteTipoLote" />
-        <EntityTypeShape EntityType="ETNADbModel.SolicitudSalida" Width="1.5" PointX="12" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ETNADbModel.DetalleSolicitudSalida" Width="1.5" PointX="6" PointY="7.625" />
-        <AssociationConnector Association="ETNADbModel.SolicitudSalidaEmpleado" />
-        <AssociationConnector Association="ETNADbModel.GuiaSalidaSolicitudSalida" />
-        <AssociationConnector Association="ETNADbModel.DetalleSolicitudSalidaProducto" />
-        <AssociationConnector Association="ETNADbModel.DetalleSolicitudSalidaSolicitudSalida" />
-        <EntityTypeShape EntityType="ETNADbModel.DetalleGuiaSalida" Width="1.5" PointX="9.75" PointY="5.5" />
-        <AssociationConnector Association="ETNADbModel.DetalleGuiaSalidaGuiaSalida" />
-        <AssociationConnector Association="ETNADbModel.DetalleGuiaSalidaProducto" />
+        <EntityTypeShape EntityType="ETNADbModel.Reclamo" Width="1.5" PointX="21" PointY="5.125" FillColor="64, 0, 64" />
+        <EntityTypeShape EntityType="ETNADbModel.InformeReclamo" Width="1.5" PointX="24" PointY="4.5" FillColor="64, 0, 64" />
+        <AssociationConnector Association="ETNADbModel.ReclamoInformeReclamo" />
+        <AssociationConnector Association="ETNADbModel.EmpleadoInformeReclamoElaboradoPor" />
+        <AssociationConnector Association="ETNADbModel.EmpleadoInformeReclamoAprobadoPor" />
+        <AssociationConnector Association="ETNADbModel.EmpleadoReclamoResgistradoPor" />
+        <EntityTypeShape EntityType="ETNADbModel.InformeResultado" Width="1.5" PointX="20.875" PointY="0.5" FillColor="64, 0, 64" />
+        <AssociationConnector Association="ETNADbModel.InformeResultadoEmpleado" />
+        <EntityTypeShape EntityType="ETNADbModel.Plantilla" Width="1.5" PointX="24.375" PointY="1" FillColor="64, 0, 64" />
+        <EntityTypeShape EntityType="ETNADbModel.TipoPlantilla" Width="1.5" PointX="27.25" PointY="0.5" FillColor="64, 0, 64" />
+        <AssociationConnector Association="ETNADbModel.PlantillaTipoPlantilla" />
+        <AssociationConnector Association="ETNADbModel.PlantillaInformeResultado" />
+        <EntityTypeShape EntityType="ETNADbModel.PlantillaDetalle" Width="1.75" PointX="29.125" PointY="3.375" FillColor="64, 0, 64" />
+        <AssociationConnector Association="ETNADbModel.PlantillaDetallePlantilla" />
+        <EntityTypeShape EntityType="ETNADbModel.Programacion" Width="2" PointX="26.5" PointY="4.375" IsExpanded="true" FillColor="64, 0, 64" />
+        <AssociationConnector Association="ETNADbModel.ProgramacionPlantilla" />
+        <EntityTypeShape EntityType="ETNADbModel.Encuesta" Width="1.5" PointX="31.375" PointY="0.5" FillColor="64, 0, 64" />
+        <AssociationConnector Association="ETNADbModel.PlantillaDetalleEncuesta" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ETNADbModel.Cliente" Width="1.5" PointX="31.5" PointY="3.625" />
+        <AssociationConnector Association="ETNADbModel.ClienteEncuesta" />
+        <EntityTypeShape EntityType="ETNADbModel.ProgramacionesEncuesta" Width="1.5" PointX="0.56562411997729167" PointY="18.285889499953896" />
+        <AssociationConnector Association="ETNADbModel.EncuestaProgramacion" />
+        <EntityTypeShape EntityType="ETNADbModel.Factura" Width="1.5" PointX="33.75" PointY="5" />
+        <AssociationConnector Association="ETNADbModel.ClienteFactura" />
+        <EntityTypeShape EntityType="ETNADbModel.FacturaDetalle" Width="1.5" PointX="33.375" PointY="8.375" />
+        <AssociationConnector Association="ETNADbModel.FacturaFacturaDetalle" />
+        <AssociationConnector Association="ETNADbModel.ReclamoFacturaDetalle" />
+        <AssociationConnector Association="ETNADbModel.ProductoFacturaDetalle" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

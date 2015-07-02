@@ -1,14 +1,14 @@
-C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\ETNA.DAL.dll.config
-C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\ETNA.DAL.dll
-C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\ETNA.DAL.pdb
-C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\EntityFramework.dll
-C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\EntityFramework.xml
-C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\es\EntityFramework.resources.dll
-C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\obj\Debug\ETNA.DAL.dll
-C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\obj\Debug\ETNA.DAL.pdb
-C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\ETNA.Domain.dll
-C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\ETNA.Domain.pdb
-C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\obj\Debug\ETNA.DAL.csprojResolveAssemblyReference.cache
+C:\ETNA-TP2\ETNA\ETNA.Solution\ETNA.DAL\bin\Debug\ETNA.DAL.dll.config
+C:\ETNA-TP2\ETNA\ETNA.Solution\ETNA.DAL\bin\Debug\ETNA.DAL.dll
+C:\ETNA-TP2\ETNA\ETNA.Solution\ETNA.DAL\bin\Debug\ETNA.DAL.pdb
+C:\ETNA-TP2\ETNA\ETNA.Solution\ETNA.DAL\bin\Debug\EntityFramework.dll
+C:\ETNA-TP2\ETNA\ETNA.Solution\ETNA.DAL\bin\Debug\ETNA.Domain.dll
+C:\ETNA-TP2\ETNA\ETNA.Solution\ETNA.DAL\bin\Debug\ETNA.Domain.pdb
+C:\ETNA-TP2\ETNA\ETNA.Solution\ETNA.DAL\bin\Debug\EntityFramework.xml
+C:\ETNA-TP2\ETNA\ETNA.Solution\ETNA.DAL\bin\Debug\es\EntityFramework.resources.dll
+C:\ETNA-TP2\ETNA\ETNA.Solution\ETNA.DAL\obj\Debug\ETNA.DAL.csprojResolveAssemblyReference.cache
+C:\ETNA-TP2\ETNA\ETNA.Solution\ETNA.DAL\obj\Debug\ETNA.DAL.dll
+C:\ETNA-TP2\ETNA\ETNA.Solution\ETNA.DAL\obj\Debug\ETNA.DAL.pdb
 C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.DAL\bin\Debug\ETNA.DAL.dll.config
 C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.DAL\bin\Debug\ETNA.DAL.dll
 C:\Users\vramos\Source\Repos\tp3_upc_etna\ETNA.DAL\bin\Debug\ETNA.DAL.pdb

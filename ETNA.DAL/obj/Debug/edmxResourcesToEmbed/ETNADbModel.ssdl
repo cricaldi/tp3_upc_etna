@@ -14,14 +14,24 @@
     <EntitySet Name="Kardex" EntityType="ETNADbModel.Store.Kardex" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Lotes" EntityType="ETNADbModel.Store.Lotes" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TipoLotes" EntityType="ETNADbModel.Store.TipoLotes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="SolicitudSalidaConjunto" EntityType="ETNADbModel.Store.SolicitudSalidaConjunto" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="DetalleSolicitudSalidaConjunto" EntityType="ETNADbModel.Store.DetalleSolicitudSalidaConjunto" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="DetalleGuiaSalidaConjunto" EntityType="ETNADbModel.Store.DetalleGuiaSalidaConjunto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Reclamos" EntityType="ETNADbModel.Store.Reclamos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InformesReclamo" EntityType="ETNADbModel.Store.InformesReclamo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InformesResultado" EntityType="ETNADbModel.Store.InformesResultado" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Plantillas" EntityType="ETNADbModel.Store.Plantillas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TiposPlantilla" EntityType="ETNADbModel.Store.TiposPlantilla" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlantillasDetalle" EntityType="ETNADbModel.Store.PlantillasDetalle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Programaciones" EntityType="ETNADbModel.Store.Programaciones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Encuestas" EntityType="ETNADbModel.Store.Encuestas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Clientes" EntityType="ETNADbModel.Store.Clientes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProgramacionesEncuesta" EntityType="ETNADbModel.Store.ProgramacionesEncuesta" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Facturas" EntityType="ETNADbModel.Store.Facturas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FacturaDetalles" EntityType="ETNADbModel.Store.FacturaDetalles" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DocumentosReferencia_GuiaEntrada" EntityType="ETNADbModel.Store.DocumentosReferencia_GuiaEntrada" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DocumentosReferencia_GuiaSalida" EntityType="ETNADbModel.Store.DocumentosReferencia_GuiaSalida" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DocumentosReferencia_AjusteInventario" EntityType="ETNADbModel.Store.DocumentosReferencia_AjusteInventario" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="webpages_UsersInRoles" EntityType="ETNADbModel.Store.webpages_UsersInRoles" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="EmpleadoAlmacen" EntityType="ETNADbModel.Store.EmpleadoAlmacen" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlantillaDetalleEncuesta" EntityType="ETNADbModel.Store.PlantillaDetalleEncuesta" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="DocumentoReferenciaAlmacen" Association="ETNADbModel.Store.DocumentoReferenciaAlmacen">
       <End Role="DocumentoReferencia" EntitySet="DocumentosReferencia" />
       <End Role="Almacen" EntitySet="Almacenes" />
@@ -82,29 +92,73 @@
       <End Role="Lote" EntitySet="Lotes" />
       <End Role="TipoLote" EntitySet="TipoLotes" />
     </AssociationSet>
-    <AssociationSet Name="SolicitudSalidaEmpleado" Association="ETNADbModel.Store.SolicitudSalidaEmpleado">
-      <End Role="SolicitudSalida" EntitySet="SolicitudSalidaConjunto" />
+    <AssociationSet Name="ReclamoInformeReclamo" Association="ETNADbModel.Store.ReclamoInformeReclamo">
+      <End Role="Reclamo" EntitySet="Reclamos" />
+      <End Role="InformeReclamo" EntitySet="InformesReclamo" />
+    </AssociationSet>
+    <AssociationSet Name="EmpleadoInformeReclamoElaboradoPor" Association="ETNADbModel.Store.EmpleadoInformeReclamoElaboradoPor">
+      <End Role="Empleado" EntitySet="Empleados" />
+      <End Role="InformeReclamo" EntitySet="InformesReclamo" />
+    </AssociationSet>
+    <AssociationSet Name="EmpleadoInformeReclamoAprobadoPor" Association="ETNADbModel.Store.EmpleadoInformeReclamoAprobadoPor">
+      <End Role="Empleado" EntitySet="Empleados" />
+      <End Role="InformeReclamo" EntitySet="InformesReclamo" />
+    </AssociationSet>
+    <AssociationSet Name="EmpleadoReclamoResgistradoPor" Association="ETNADbModel.Store.EmpleadoReclamoResgistradoPor">
+      <End Role="Empleado" EntitySet="Empleados" />
+      <End Role="Reclamo" EntitySet="Reclamos" />
+    </AssociationSet>
+    <AssociationSet Name="InformeResultadoEmpleado" Association="ETNADbModel.Store.InformeResultadoEmpleado">
+      <End Role="InformeResultado" EntitySet="InformesResultado" />
       <End Role="Empleado" EntitySet="Empleados" />
     </AssociationSet>
-    <AssociationSet Name="GuiaSalidaSolicitudSalida" Association="ETNADbModel.Store.GuiaSalidaSolicitudSalida">
-      <End Role="GuiaSalida" EntitySet="DocumentosReferencia_GuiaSalida" />
-      <End Role="SolicitudSalida" EntitySet="SolicitudSalidaConjunto" />
+    <AssociationSet Name="PlantillaTipoPlantilla" Association="ETNADbModel.Store.PlantillaTipoPlantilla">
+      <End Role="Plantilla" EntitySet="Plantillas" />
+      <End Role="TipoPlantilla" EntitySet="TiposPlantilla" />
     </AssociationSet>
-    <AssociationSet Name="DetalleSolicitudSalidaProducto" Association="ETNADbModel.Store.DetalleSolicitudSalidaProducto">
-      <End Role="DetalleSolicitudSalida" EntitySet="DetalleSolicitudSalidaConjunto" />
+    <AssociationSet Name="PlantillaInformeResultado" Association="ETNADbModel.Store.PlantillaInformeResultado">
+      <End Role="Plantilla" EntitySet="Plantillas" />
+      <End Role="InformeResultado" EntitySet="InformesResultado" />
+    </AssociationSet>
+    <AssociationSet Name="PlantillaDetallePlantilla" Association="ETNADbModel.Store.PlantillaDetallePlantilla">
+      <End Role="PlantillaDetalle" EntitySet="PlantillasDetalle" />
+      <End Role="Plantilla" EntitySet="Plantillas" />
+    </AssociationSet>
+    <AssociationSet Name="ProgramacionPlantilla" Association="ETNADbModel.Store.ProgramacionPlantilla">
+      <End Role="Programacion" EntitySet="Programaciones" />
+      <End Role="Plantilla" EntitySet="Plantillas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlantillaDetalleEncuesta_PlantillaDetalle" Association="ETNADbModel.Store.FK_PlantillaDetalleEncuesta_PlantillaDetalle">
+      <End Role="PlantillaDetalle" EntitySet="PlantillasDetalle" />
+      <End Role="PlantillaDetalleEncuesta" EntitySet="PlantillaDetalleEncuesta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlantillaDetalleEncuesta_Encuesta" Association="ETNADbModel.Store.FK_PlantillaDetalleEncuesta_Encuesta">
+      <End Role="Encuesta" EntitySet="Encuestas" />
+      <End Role="PlantillaDetalleEncuesta" EntitySet="PlantillaDetalleEncuesta" />
+    </AssociationSet>
+    <AssociationSet Name="ClienteEncuesta" Association="ETNADbModel.Store.ClienteEncuesta">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="Encuesta" EntitySet="Encuestas" />
+    </AssociationSet>
+    <AssociationSet Name="EncuestaProgramacion" Association="ETNADbModel.Store.EncuestaProgramacion">
+      <End Role="Encuesta" EntitySet="Encuestas" />
+      <End Role="Programacion" EntitySet="Programaciones" />
+    </AssociationSet>
+    <AssociationSet Name="ClienteFactura" Association="ETNADbModel.Store.ClienteFactura">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="Factura" EntitySet="Facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FacturaFacturaDetalle" Association="ETNADbModel.Store.FacturaFacturaDetalle">
+      <End Role="Factura" EntitySet="Facturas" />
+      <End Role="FacturaDetalle" EntitySet="FacturaDetalles" />
+    </AssociationSet>
+    <AssociationSet Name="ReclamoFacturaDetalle" Association="ETNADbModel.Store.ReclamoFacturaDetalle">
+      <End Role="Reclamo" EntitySet="Reclamos" />
+      <End Role="FacturaDetalle" EntitySet="FacturaDetalles" />
+    </AssociationSet>
+    <AssociationSet Name="ProductoFacturaDetalle" Association="ETNADbModel.Store.ProductoFacturaDetalle">
       <End Role="Producto" EntitySet="Productos" />
-    </AssociationSet>
-    <AssociationSet Name="DetalleSolicitudSalidaSolicitudSalida" Association="ETNADbModel.Store.DetalleSolicitudSalidaSolicitudSalida">
-      <End Role="DetalleSolicitudSalida" EntitySet="DetalleSolicitudSalidaConjunto" />
-      <End Role="SolicitudSalida" EntitySet="SolicitudSalidaConjunto" />
-    </AssociationSet>
-    <AssociationSet Name="DetalleGuiaSalidaGuiaSalida" Association="ETNADbModel.Store.DetalleGuiaSalidaGuiaSalida">
-      <End Role="DetalleGuiaSalida" EntitySet="DetalleGuiaSalidaConjunto" />
-      <End Role="GuiaSalida" EntitySet="DocumentosReferencia_GuiaSalida" />
-    </AssociationSet>
-    <AssociationSet Name="DetalleGuiaSalidaProducto" Association="ETNADbModel.Store.DetalleGuiaSalidaProducto">
-      <End Role="DetalleGuiaSalida" EntitySet="DetalleGuiaSalidaConjunto" />
-      <End Role="Producto" EntitySet="Productos" />
+      <End Role="FacturaDetalle" EntitySet="FacturaDetalles" />
     </AssociationSet>
     <AssociationSet Name="FK_GuiaEntrada_inherits_DocumentoReferencia" Association="ETNADbModel.Store.FK_GuiaEntrada_inherits_DocumentoReferencia">
       <End Role="DocumentoReferencia" EntitySet="DocumentosReferencia" />
@@ -210,7 +264,6 @@
     <Property Name="FechaElaboracion" Type="datetime" Nullable="false" />
     <Property Name="TipoEntrada" Type="int" Nullable="false" />
     <Property Name="Estado" Type="int" Nullable="false" />
-    <Property Name="Observaciones" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Empleado_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="DetalleSolicitudEntrada">
@@ -250,38 +303,142 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
-  <EntityType Name="SolicitudSalidaConjunto">
+  <EntityType Name="Reclamos">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoReclamo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FechaHoraReclamo" Type="datetime" Nullable="false" />
+    <Property Name="Motivo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Detalle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Observaciones" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FechaRespuesta" Type="datetime" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RegistradoPor_Id" Type="int" Nullable="false" />
+    <Property Name="FacturaDetalle_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InformesReclamo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoInforme" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DetalleInforme" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FechaAprobacion" Type="datetime" Nullable="false" />
     <Property Name="FechaElaboracion" Type="datetime" Nullable="false" />
-    <Property Name="DireccionEntrega" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="RazonSocialDestinatario" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="TipoSalida" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Estado" Type="int" Nullable="false" />
-    <Property Name="Observaciones" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Empleado_Id" Type="int" Nullable="false" />
+    <Property Name="ObservacionAprobador" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Reclamo_Id" Type="int" Nullable="false" />
+    <Property Name="ElaboradoPor_Id" Type="int" Nullable="false" />
+    <Property Name="AprobadoPor_Id" Type="int" Nullable="true" />
   </EntityType>
-  <EntityType Name="DetalleSolicitudSalidaConjunto">
+  <EntityType Name="InformesResultado">
     <Key>
-      <PropertyRef Name="IdProducto" />
-      <PropertyRef Name="IdSolicitudSalida" />
+      <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FechaElaboracion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FechaTabIni" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FechaTabFin" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DetalleAnalisis" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ElaboradoPor_Id" Type="int" Nullable="false" />
+    <Property Name="Plantilla_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Plantillas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TipoPlantilla_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TiposPlantilla">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PlantillasDetalle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoPregunta" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DescripcionPregunta" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Respuesta1" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Respuesta2" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Respuesta3" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Respuesta4" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Respuesta5" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Plantilla_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Programaciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoProgramacion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Periodicidad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="FechaFin" Type="datetime" Nullable="false" />
+    <Property Name="PorcentajeEncuestados" Type="float" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DiasVigencia" Type="smallint" Nullable="false" />
+    <Property Name="Plantilla_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Encuestas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="FechaRespuesta" Type="datetime" Nullable="false" />
+    <Property Name="Titulo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cliente_Codigo" Type="int" Nullable="false" />
+    <Property Name="Programacion_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Direccion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DocIdentidad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Apellidos" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nombres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProgramacionesEncuesta">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Facturas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NroFactura" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FechaFactura" Type="datetime" Nullable="false" />
+    <Property Name="ValorVenta" Type="float" Nullable="false" />
     <Property Name="PrecioVenta" Type="float" Nullable="false" />
-    <Property Name="IdProducto" Type="int" Nullable="false" />
-    <Property Name="IdSolicitudSalida" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cliente_Codigo" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="DetalleGuiaSalidaConjunto">
+  <EntityType Name="FacturaDetalles">
     <Key>
-      <PropertyRef Name="IdGuiaSalida" />
-      <PropertyRef Name="IdProducto" />
+      <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Cantidad" Type="int" Nullable="false" />
-    <Property Name="Precio" Type="float" Nullable="false" />
-    <Property Name="IdGuiaSalida" Type="int" Nullable="false" />
-    <Property Name="IdProducto" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Factura_Id" Type="int" Nullable="false" />
+    <Property Name="Producto_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="DocumentosReferencia_GuiaEntrada">
     <Key>
@@ -295,7 +452,6 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="SolicitudSalida_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="DocumentosReferencia_AjusteInventario">
     <Key>
@@ -319,6 +475,14 @@
     </Key>
     <Property Name="Empleado_Id" Type="int" Nullable="false" />
     <Property Name="Almacen_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PlantillaDetalleEncuesta">
+    <Key>
+      <PropertyRef Name="PlantillaDetalle_Id" />
+      <PropertyRef Name="Encuesta_Id" />
+    </Key>
+    <Property Name="PlantillaDetalle_Id" Type="int" Nullable="false" />
+    <Property Name="Encuesta_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="DocumentoReferenciaAlmacen">
     <End Role="DocumentoReferencia" Type="ETNADbModel.Store.DocumentosReferencia" Multiplicity="*" />
@@ -452,75 +616,183 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="SolicitudSalidaEmpleado">
-    <End Role="SolicitudSalida" Type="ETNADbModel.Store.SolicitudSalidaConjunto" Multiplicity="*" />
+  <Association Name="ReclamoInformeReclamo">
+    <End Role="Reclamo" Type="ETNADbModel.Store.Reclamos" Multiplicity="1" />
+    <End Role="InformeReclamo" Type="ETNADbModel.Store.InformesReclamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reclamo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformeReclamo">
+        <PropertyRef Name="Reclamo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EmpleadoInformeReclamoElaboradoPor">
+    <End Role="Empleado" Type="ETNADbModel.Store.Empleados" Multiplicity="1" />
+    <End Role="InformeReclamo" Type="ETNADbModel.Store.InformesReclamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformeReclamo">
+        <PropertyRef Name="ElaboradoPor_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EmpleadoInformeReclamoAprobadoPor">
+    <End Role="Empleado" Type="ETNADbModel.Store.Empleados" Multiplicity="0..1" />
+    <End Role="InformeReclamo" Type="ETNADbModel.Store.InformesReclamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformeReclamo">
+        <PropertyRef Name="AprobadoPor_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EmpleadoReclamoResgistradoPor">
+    <End Role="Empleado" Type="ETNADbModel.Store.Empleados" Multiplicity="1" />
+    <End Role="Reclamo" Type="ETNADbModel.Store.Reclamos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reclamo">
+        <PropertyRef Name="RegistradoPor_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InformeResultadoEmpleado">
+    <End Role="InformeResultado" Type="ETNADbModel.Store.InformesResultado" Multiplicity="*" />
     <End Role="Empleado" Type="ETNADbModel.Store.Empleados" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="SolicitudSalida">
-        <PropertyRef Name="Empleado_Id" />
+      <Dependent Role="InformeResultado">
+        <PropertyRef Name="ElaboradoPor_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="GuiaSalidaSolicitudSalida">
-    <End Role="GuiaSalida" Type="ETNADbModel.Store.DocumentosReferencia_GuiaSalida" Multiplicity="*" />
-    <End Role="SolicitudSalida" Type="ETNADbModel.Store.SolicitudSalidaConjunto" Multiplicity="1" />
+  <Association Name="PlantillaTipoPlantilla">
+    <End Role="Plantilla" Type="ETNADbModel.Store.Plantillas" Multiplicity="*" />
+    <End Role="TipoPlantilla" Type="ETNADbModel.Store.TiposPlantilla" Multiplicity="1" />
     <ReferentialConstraint>
-      <Principal Role="SolicitudSalida">
+      <Principal Role="TipoPlantilla">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="GuiaSalida">
-        <PropertyRef Name="SolicitudSalida_Id" />
+      <Dependent Role="Plantilla">
+        <PropertyRef Name="TipoPlantilla_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="DetalleSolicitudSalidaProducto">
-    <End Role="DetalleSolicitudSalida" Type="ETNADbModel.Store.DetalleSolicitudSalidaConjunto" Multiplicity="*" />
+  <Association Name="PlantillaInformeResultado">
+    <End Role="Plantilla" Type="ETNADbModel.Store.Plantillas" Multiplicity="1" />
+    <End Role="InformeResultado" Type="ETNADbModel.Store.InformesResultado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plantilla">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformeResultado">
+        <PropertyRef Name="Plantilla_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PlantillaDetallePlantilla">
+    <End Role="PlantillaDetalle" Type="ETNADbModel.Store.PlantillasDetalle" Multiplicity="*" />
+    <End Role="Plantilla" Type="ETNADbModel.Store.Plantillas" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Plantilla">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlantillaDetalle">
+        <PropertyRef Name="Plantilla_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProgramacionPlantilla">
+    <End Role="Programacion" Type="ETNADbModel.Store.Programaciones" Multiplicity="*" />
+    <End Role="Plantilla" Type="ETNADbModel.Store.Plantillas" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Plantilla">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Programacion">
+        <PropertyRef Name="Plantilla_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClienteEncuesta">
+    <End Role="Cliente" Type="ETNADbModel.Store.Clientes" Multiplicity="1" />
+    <End Role="Encuesta" Type="ETNADbModel.Store.Encuestas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Encuesta">
+        <PropertyRef Name="Cliente_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EncuestaProgramacion">
+    <End Role="Encuesta" Type="ETNADbModel.Store.Encuestas" Multiplicity="*" />
+    <End Role="Programacion" Type="ETNADbModel.Store.Programaciones" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Programacion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Encuesta">
+        <PropertyRef Name="Programacion_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClienteFactura">
+    <End Role="Cliente" Type="ETNADbModel.Store.Clientes" Multiplicity="1" />
+    <End Role="Factura" Type="ETNADbModel.Store.Facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="Cliente_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FacturaFacturaDetalle">
+    <End Role="Factura" Type="ETNADbModel.Store.Facturas" Multiplicity="1" />
+    <End Role="FacturaDetalle" Type="ETNADbModel.Store.FacturaDetalles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FacturaDetalle">
+        <PropertyRef Name="Factura_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ReclamoFacturaDetalle">
+    <End Role="Reclamo" Type="ETNADbModel.Store.Reclamos" Multiplicity="*" />
+    <End Role="FacturaDetalle" Type="ETNADbModel.Store.FacturaDetalles" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="FacturaDetalle">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reclamo">
+        <PropertyRef Name="FacturaDetalle_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductoFacturaDetalle">
     <End Role="Producto" Type="ETNADbModel.Store.Productos" Multiplicity="1" />
+    <End Role="FacturaDetalle" Type="ETNADbModel.Store.FacturaDetalles" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Producto">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="DetalleSolicitudSalida">
-        <PropertyRef Name="IdProducto" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="DetalleSolicitudSalidaSolicitudSalida">
-    <End Role="DetalleSolicitudSalida" Type="ETNADbModel.Store.DetalleSolicitudSalidaConjunto" Multiplicity="*" />
-    <End Role="SolicitudSalida" Type="ETNADbModel.Store.SolicitudSalidaConjunto" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="SolicitudSalida">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="DetalleSolicitudSalida">
-        <PropertyRef Name="IdSolicitudSalida" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="DetalleGuiaSalidaGuiaSalida">
-    <End Role="DetalleGuiaSalida" Type="ETNADbModel.Store.DetalleGuiaSalidaConjunto" Multiplicity="*" />
-    <End Role="GuiaSalida" Type="ETNADbModel.Store.DocumentosReferencia_GuiaSalida" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="GuiaSalida">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="DetalleGuiaSalida">
-        <PropertyRef Name="IdGuiaSalida" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="DetalleGuiaSalidaProducto">
-    <End Role="DetalleGuiaSalida" Type="ETNADbModel.Store.DetalleGuiaSalidaConjunto" Multiplicity="*" />
-    <End Role="Producto" Type="ETNADbModel.Store.Productos" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="Producto">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="DetalleGuiaSalida">
-        <PropertyRef Name="IdProducto" />
+      <Dependent Role="FacturaDetalle">
+        <PropertyRef Name="Producto_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -569,6 +841,30 @@
       </Principal>
       <Dependent Role="EmpleadoAlmacen">
         <PropertyRef Name="Almacen_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlantillaDetalleEncuesta_PlantillaDetalle">
+    <End Role="PlantillaDetalle" Type="ETNADbModel.Store.PlantillasDetalle" Multiplicity="1" />
+    <End Role="PlantillaDetalleEncuesta" Type="ETNADbModel.Store.PlantillaDetalleEncuesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlantillaDetalle">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlantillaDetalleEncuesta">
+        <PropertyRef Name="PlantillaDetalle_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlantillaDetalleEncuesta_Encuesta">
+    <End Role="PlantillaDetalleEncuesta" Type="ETNADbModel.Store.PlantillaDetalleEncuesta" Multiplicity="*" />
+    <End Role="Encuesta" Type="ETNADbModel.Store.Encuestas" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Encuesta">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlantillaDetalleEncuesta">
+        <PropertyRef Name="Encuesta_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

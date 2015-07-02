@@ -111,7 +111,6 @@
           <ScalarProperty Name="FechaElaboracion" ColumnName="FechaElaboracion" />
           <ScalarProperty Name="TipoEntrada" ColumnName="TipoEntrada" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
-          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -151,36 +150,137 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="SolicitudSalidaConjunto">
-      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.SolicitudSalida)">
-        <MappingFragment StoreEntitySet="SolicitudSalidaConjunto">
+    <EntitySetMapping Name="Reclamos">
+      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.Reclamo)">
+        <MappingFragment StoreEntitySet="Reclamos">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="FechaElaboracion" ColumnName="FechaElaboracion" />
-          <ScalarProperty Name="DireccionEntrega" ColumnName="DireccionEntrega" />
-          <ScalarProperty Name="RazonSocialDestinatario" ColumnName="RazonSocialDestinatario" />
-          <ScalarProperty Name="TipoSalida" ColumnName="TipoSalida" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="CodigoReclamo" ColumnName="CodigoReclamo" />
+          <ScalarProperty Name="FechaHoraReclamo" ColumnName="FechaHoraReclamo" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
           <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="FechaRespuesta" ColumnName="FechaRespuesta" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DetalleSolicitudSalidaConjunto">
-      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.DetalleSolicitudSalida)">
-        <MappingFragment StoreEntitySet="DetalleSolicitudSalidaConjunto">
-          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
-          <ScalarProperty Name="IdSolicitudSalida" ColumnName="IdSolicitudSalida" />
-          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+    <EntitySetMapping Name="InformesReclamo">
+      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.InformeReclamo)">
+        <MappingFragment StoreEntitySet="InformesReclamo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CodigoInforme" ColumnName="CodigoInforme" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="DetalleInforme" ColumnName="DetalleInforme" />
+          <ScalarProperty Name="FechaAprobacion" ColumnName="FechaAprobacion" />
+          <ScalarProperty Name="FechaElaboracion" ColumnName="FechaElaboracion" />
+          <ScalarProperty Name="ObservacionAprobador" ColumnName="ObservacionAprobador" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InformesResultado">
+      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.InformeResultado)">
+        <MappingFragment StoreEntitySet="InformesResultado">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="FechaElaboracion" ColumnName="FechaElaboracion" />
+          <ScalarProperty Name="FechaTabIni" ColumnName="FechaTabIni" />
+          <ScalarProperty Name="FechaTabFin" ColumnName="FechaTabFin" />
+          <ScalarProperty Name="DetalleAnalisis" ColumnName="DetalleAnalisis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plantillas">
+      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.Plantilla)">
+        <MappingFragment StoreEntitySet="Plantillas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposPlantilla">
+      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.TipoPlantilla)">
+        <MappingFragment StoreEntitySet="TiposPlantilla">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlantillasDetalle">
+      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.PlantillaDetalle)">
+        <MappingFragment StoreEntitySet="PlantillasDetalle">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CodigoPregunta" ColumnName="CodigoPregunta" />
+          <ScalarProperty Name="DescripcionPregunta" ColumnName="DescripcionPregunta" />
+          <ScalarProperty Name="Respuesta1" ColumnName="Respuesta1" />
+          <ScalarProperty Name="Respuesta2" ColumnName="Respuesta2" />
+          <ScalarProperty Name="Respuesta3" ColumnName="Respuesta3" />
+          <ScalarProperty Name="Respuesta4" ColumnName="Respuesta4" />
+          <ScalarProperty Name="Respuesta5" ColumnName="Respuesta5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programaciones">
+      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.Programacion)">
+        <MappingFragment StoreEntitySet="Programaciones">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CodigoProgramacion" ColumnName="CodigoProgramacion" />
+          <ScalarProperty Name="Periodicidad" ColumnName="Periodicidad" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="PorcentajeEncuestados" ColumnName="PorcentajeEncuestados" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="DiasVigencia" ColumnName="DiasVigencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Encuestas">
+      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.Encuesta)">
+        <MappingFragment StoreEntitySet="Encuestas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaRespuesta" ColumnName="FechaRespuesta" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.Cliente)">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="DocIdentidad" ColumnName="DocIdentidad" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProgramacionesEncuesta">
+      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.ProgramacionesEncuesta)">
+        <MappingFragment StoreEntitySet="ProgramacionesEncuesta">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facturas">
+      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.Factura)">
+        <MappingFragment StoreEntitySet="Facturas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NroFactura" ColumnName="NroFactura" />
+          <ScalarProperty Name="FechaFactura" ColumnName="FechaFactura" />
+          <ScalarProperty Name="ValorVenta" ColumnName="ValorVenta" />
           <ScalarProperty Name="PrecioVenta" ColumnName="PrecioVenta" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DetalleGuiaSalidaConjunto">
-      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.DetalleGuiaSalida)">
-        <MappingFragment StoreEntitySet="DetalleGuiaSalidaConjunto">
-          <ScalarProperty Name="IdGuiaSalida" ColumnName="IdGuiaSalida" />
-          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
-          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
-          <ScalarProperty Name="Precio" ColumnName="Precio" />
+    <EntitySetMapping Name="FacturaDetalles">
+      <EntityTypeMapping TypeName="IsTypeOf(ETNADbModel.FacturaDetalle)">
+        <MappingFragment StoreEntitySet="FacturaDetalles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -272,19 +372,132 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="SolicitudSalidaEmpleado" TypeName="ETNADbModel.SolicitudSalidaEmpleado" StoreEntitySet="SolicitudSalidaConjunto">
-      <EndProperty Name="Empleado">
-        <ScalarProperty Name="Id" ColumnName="Empleado_Id" />
+    <AssociationSetMapping Name="ReclamoInformeReclamo" TypeName="ETNADbModel.ReclamoInformeReclamo" StoreEntitySet="InformesReclamo">
+      <EndProperty Name="Reclamo">
+        <ScalarProperty Name="Id" ColumnName="Reclamo_Id" />
       </EndProperty>
-      <EndProperty Name="SolicitudSalida">
+      <EndProperty Name="InformeReclamo">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="GuiaSalidaSolicitudSalida" TypeName="ETNADbModel.GuiaSalidaSolicitudSalida" StoreEntitySet="DocumentosReferencia_GuiaSalida">
-      <EndProperty Name="SolicitudSalida">
-        <ScalarProperty Name="Id" ColumnName="SolicitudSalida_Id" />
+    <AssociationSetMapping Name="EmpleadoInformeReclamoElaboradoPor" TypeName="ETNADbModel.EmpleadoInformeReclamoElaboradoPor" StoreEntitySet="InformesReclamo">
+      <EndProperty Name="Empleado">
+        <ScalarProperty Name="Id" ColumnName="ElaboradoPor_Id" />
       </EndProperty>
-      <EndProperty Name="GuiaSalida">
+      <EndProperty Name="InformeReclamo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EmpleadoInformeReclamoAprobadoPor" TypeName="ETNADbModel.EmpleadoInformeReclamoAprobadoPor" StoreEntitySet="InformesReclamo">
+      <EndProperty Name="Empleado">
+        <ScalarProperty Name="Id" ColumnName="AprobadoPor_Id" />
+      </EndProperty>
+      <EndProperty Name="InformeReclamo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="AprobadoPor_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EmpleadoReclamoResgistradoPor" TypeName="ETNADbModel.EmpleadoReclamoResgistradoPor" StoreEntitySet="Reclamos">
+      <EndProperty Name="Empleado">
+        <ScalarProperty Name="Id" ColumnName="RegistradoPor_Id" />
+      </EndProperty>
+      <EndProperty Name="Reclamo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="InformeResultadoEmpleado" TypeName="ETNADbModel.InformeResultadoEmpleado" StoreEntitySet="InformesResultado">
+      <EndProperty Name="Empleado">
+        <ScalarProperty Name="Id" ColumnName="ElaboradoPor_Id" />
+      </EndProperty>
+      <EndProperty Name="InformeResultado">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PlantillaTipoPlantilla" TypeName="ETNADbModel.PlantillaTipoPlantilla" StoreEntitySet="Plantillas">
+      <EndProperty Name="TipoPlantilla">
+        <ScalarProperty Name="Id" ColumnName="TipoPlantilla_Id" />
+      </EndProperty>
+      <EndProperty Name="Plantilla">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PlantillaInformeResultado" TypeName="ETNADbModel.PlantillaInformeResultado" StoreEntitySet="InformesResultado">
+      <EndProperty Name="Plantilla">
+        <ScalarProperty Name="Id" ColumnName="Plantilla_Id" />
+      </EndProperty>
+      <EndProperty Name="InformeResultado">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PlantillaDetallePlantilla" TypeName="ETNADbModel.PlantillaDetallePlantilla" StoreEntitySet="PlantillasDetalle">
+      <EndProperty Name="Plantilla">
+        <ScalarProperty Name="Id" ColumnName="Plantilla_Id" />
+      </EndProperty>
+      <EndProperty Name="PlantillaDetalle">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProgramacionPlantilla" TypeName="ETNADbModel.ProgramacionPlantilla" StoreEntitySet="Programaciones">
+      <EndProperty Name="Plantilla">
+        <ScalarProperty Name="Id" ColumnName="Plantilla_Id" />
+      </EndProperty>
+      <EndProperty Name="Programacion">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PlantillaDetalleEncuesta" TypeName="ETNADbModel.PlantillaDetalleEncuesta" StoreEntitySet="PlantillaDetalleEncuesta">
+      <EndProperty Name="PlantillaDetalle">
+        <ScalarProperty Name="Id" ColumnName="PlantillaDetalle_Id" />
+      </EndProperty>
+      <EndProperty Name="Encuesta">
+        <ScalarProperty Name="Id" ColumnName="Encuesta_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClienteEncuesta" TypeName="ETNADbModel.ClienteEncuesta" StoreEntitySet="Encuestas">
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="Codigo" ColumnName="Cliente_Codigo" />
+      </EndProperty>
+      <EndProperty Name="Encuesta">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EncuestaProgramacion" TypeName="ETNADbModel.EncuestaProgramacion" StoreEntitySet="Encuestas">
+      <EndProperty Name="Programacion">
+        <ScalarProperty Name="Id" ColumnName="Programacion_Id" />
+      </EndProperty>
+      <EndProperty Name="Encuesta">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClienteFactura" TypeName="ETNADbModel.ClienteFactura" StoreEntitySet="Facturas">
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="Codigo" ColumnName="Cliente_Codigo" />
+      </EndProperty>
+      <EndProperty Name="Factura">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FacturaFacturaDetalle" TypeName="ETNADbModel.FacturaFacturaDetalle" StoreEntitySet="FacturaDetalles">
+      <EndProperty Name="Factura">
+        <ScalarProperty Name="Id" ColumnName="Factura_Id" />
+      </EndProperty>
+      <EndProperty Name="FacturaDetalle">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ReclamoFacturaDetalle" TypeName="ETNADbModel.ReclamoFacturaDetalle" StoreEntitySet="Reclamos">
+      <EndProperty Name="FacturaDetalle">
+        <ScalarProperty Name="Id" ColumnName="FacturaDetalle_Id" />
+      </EndProperty>
+      <EndProperty Name="Reclamo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProductoFacturaDetalle" TypeName="ETNADbModel.ProductoFacturaDetalle" StoreEntitySet="FacturaDetalles">
+      <EndProperty Name="Producto">
+        <ScalarProperty Name="Id" ColumnName="Producto_Id" />
+      </EndProperty>
+      <EndProperty Name="FacturaDetalle">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>

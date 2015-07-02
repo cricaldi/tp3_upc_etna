@@ -3,6 +3,28 @@ GO
 USE [ETNA.DB];
 GO
 
+CREATE PROCEDURE GetPaginasRowNumber
+   @NUM_PAGINA   INT
+   ,@TAM_PAGINA   INT
+   ,@NRO_FACTURA VARCHAR(30)
+AS
+   SET NOCOUNT ON;
+   SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; 
+   WITH DRV_TBL AS 
+   (
+      SELECT 
+         ROW_NUMBER() OVER (ORDER BY fd.id DESC) AS rownum
+         ,fd.*
+         /*,f.NroFactura,c.Apellidos,c.Nombres,p.Id,p.Nombre,p.PrecioListaVenta,p.Estado*/
+      FROM FacturaDetalles AS fd
+      INNER JOIN Facturas AS f ON f.Id = fd.Factura_Id
+      WHERE f.NroFactura LIKE '%'+@NRO_FACTURA+'%' and f.estado<>'A'
+      /*INNER JOIN Clientes AS c ON c.Codigo = f.Cliente_Codigo
+      INNER JOIN Productos AS p ON p.Id = fd.Producto_Id*/
+   )
+   SELECT * FROM DRV_TBL
+   WHERE ROWNUM BETWEEN (@NUM_PAGINA*@TAM_PAGINA)-@TAM_PAGINA+1 AND (@NUM_PAGINA*@TAM_PAGINA)
+GO
 /*IMPORTANTE : HACER SIEMPRE CONCIDIR EL USERID con EMPLEADOID, de esa forma se nos simplifica esa parte de la programación*/
 
 
@@ -64,17 +86,14 @@ VALUES ('CAROLINA','ROJAS','ALCANFORES 233','ASISTENTE ALMACEN',10);
 INSERT INTO Almacenes (Nombre, Direccion, Tipo, AreaEnM2)
 VALUES ('ALMACEN PRINCIPAL','AV. EL PACÍFICO 501 – 561 INDEPENDENCIA',1,1500);
 INSERT INTO Almacenes (Nombre, Direccion, Tipo, AreaEnM2)
-VALUES ('ALMACEN INSUMOS','AV. ARGENTINA 780',1,1000);
+VALUES ('ALMACEN INSUMOS','AV. EL PACÍFICO 501 – 561 INDEPENDENCIA',1,1000);
 INSERT INTO Almacenes (Nombre, Direccion, Tipo, AreaEnM2)
-VALUES ('ALMACEN SECUNDARIO','KM 57 PANAMERICANA NORTE',1,500);
+VALUES ('ALMACEN SECUNDARIO','AV. EL PACÍFICO 501 – 561 INDEPENDENCIA',1,500);
 
--- Empleado con 3 almacenes DVALDIVIA
 INSERT INTO EmpleadoAlmacen (Empleado_Id, Almacen_Id) VALUES (1,1);
 INSERT INTO EmpleadoAlmacen (Empleado_Id, Almacen_Id) VALUES (1,2);
 INSERT INTO EmpleadoAlmacen (Empleado_Id, Almacen_Id) VALUES (1,3);
--- Empleado con 1 almacén MDELALCAZAR
 INSERT INTO EmpleadoAlmacen (Empleado_Id, Almacen_Id) VALUES (2,1);
--- Empleado con 1 almacén JMOSCOSO
 INSERT INTO EmpleadoAlmacen (Empleado_Id, Almacen_Id) VALUES (3,2);
 
 INSERT INTO Productos (Nombre, DescripcionCorta,DescripcionLarga, PrecioListaCompra, PrecioListaVenta, Estado)
@@ -122,15 +141,14 @@ VALUES ('MALLA METALICA','','',20,30, 0);
 INSERT INTO Productos (Nombre, DescripcionCorta,DescripcionLarga, PrecioListaCompra, PrecioListaVenta, Estado)
 VALUES ('ANIONES','','',30,40, 0);
 
--- Año - mes - día
 INSERT INTO SOLICITUDESENTRADA (FECHAELABORACION, TIPOENTRADA, ESTADO, EMPLEADO_ID)
-VALUES ('2015-03-01',1,2,6)
+VALUES ('01/01/2015',1,2,1)
 INSERT INTO SOLICITUDESENTRADA (FECHAELABORACION, TIPOENTRADA, ESTADO, EMPLEADO_ID)
-VALUES ('2015-03-7',2,2,6)
+VALUES ('02/01/2015',2,2,1)
 INSERT INTO SOLICITUDESENTRADA (FECHAELABORACION, TIPOENTRADA, ESTADO, EMPLEADO_ID)
-VALUES ('2015-03-10',3,2,7)
+VALUES ('03/01/2015',3,2,2)
 INSERT INTO SOLICITUDESENTRADA (FECHAELABORACION, TIPOENTRADA, ESTADO, EMPLEADO_ID)
-VALUES ('2015-03-15',1,2,8)
+VALUES ('04/01/2015',1,2,2)
 
 INSERT INTO DETALLESOLICITUDENTRADA (IDPRODUCTO, IDSOLICITUDENTRADA, CANTIDAD)
 VALUES (1,1,10);
@@ -175,6 +193,73 @@ values('Lote tipo 2')
 INSERT INTO TIPOLOTES(descripcion)
 values('Lote tipo 3')
 
+/** SCCRIPT DE INSERCION -- Modulo Encuesta POSTVENTA **/
+INSERT INTO TIPOSPLANTILLA (DESCRIPCION) VALUES ('Ventas');
+INSERT INTO TIPOSPLANTILLA (DESCRIPCION) VALUES ('Reclamos');
+INSERT INTO TIPOSPLANTILLA (DESCRIPCION) VALUES ('Garantias');
+
+INSERT INTO Plantillas (descripcion, estado, tipoplantilla_id) VALUES ('Proceso de Venta', 'A', 1);
+INSERT INTO Plantillas (descripcion, estado, tipoplantilla_id) VALUES ('Calidad Producto', 'A', 2);
+INSERT INTO Plantillas (descripcion, estado, tipoplantilla_id) VALUES ('Atención Reclamos', 'A', 3);
+INSERT INTO Plantillas (descripcion, estado, tipoplantilla_id) VALUES ('Calidad Atención Reclamo', 'A', 3);
+
+INSERT INTO PlantillasDetalle (codigopregunta, descripcionpregunta, respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, plantilla_id) VALUES ('TEMP01-PR01', '¿que mejoras darias en servicio de ventas?', 'atencion personalizada al cliente', 'mejor analisis de evaluacion de ventas mensuales', 'aumento de porcentaje en comision', '', '', 1);
+INSERT INTO PlantillasDetalle (codigopregunta, descripcionpregunta, respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, plantilla_id) VALUES ('TEMP01-PR02', '¿que motivacion necesita para realizar mas ventas?', 'bonificaciones en vacaciones', 'aumento de sueldo por mayoria de contratos ejecutados', 'ascensos de puestos', 'reconocimientos certificados en venta con historial en la hoja de vida', 'aumento de 15 dias de vacaciones', 1);
+
+INSERT INTO [ETNA.DB].dbo.clientes (direccion, DocIdentidad, Apellidos, Nombres, Email) VALUES ('','98765432','Ponce Pozo', 'Mellisa', 'malozaponce@gmail.com');
+INSERT INTO [ETNA.DB].dbo.clientes (direccion, DocIdentidad, Apellidos, Nombres, Email) VALUES ('','67389832','Ramos Huatuco', 'Victor', 'pilon@gmail.com');
+INSERT INTO [ETNA.DB].dbo.clientes (direccion, DocIdentidad, Apellidos, Nombres, Email) VALUES ('','72638233','Calderon', 'Omar', 'paddi@gmail.com');
+INSERT INTO [ETNA.DB].dbo.clientes (direccion, DocIdentidad, Apellidos, Nombres, Email) VALUES ('','97389832','Taboada', 'Paul Carlos', 'pacharly@gmail.com');
+INSERT INTO [ETNA.DB].dbo.clientes (direccion, DocIdentidad, Apellidos, Nombres, Email) VALUES ('','52638233','Luna', 'Ivan', 'ivan@gmail.com');
 
 
+/* SCRIPT INSERCION FACTURAS*/
+INSERT INTO [ETNA.DB].dbo.Facturas(NroFactura, FechaFactura,ValorVenta,PrecioVenta,Estado,Cliente_Codigo)
+VALUES ('FA-001-00001','2015-03-08',300.50,350.55,'E',2);
+INSERT INTO [ETNA.DB].dbo.Facturas(NroFactura, FechaFactura,ValorVenta,PrecioVenta,Estado,Cliente_Codigo)
+VALUES ('FA-001-00002','2015-03-09',1000,1350.55,'A',3);
+INSERT INTO [ETNA.DB].dbo.Facturas(NroFactura, FechaFactura,ValorVenta,PrecioVenta,Estado,Cliente_Codigo)
+VALUES ('FA-001-00003','2015-03-09',900.50,950.55,'E',1);
+INSERT INTO [ETNA.DB].dbo.Facturas(NroFactura, FechaFactura,ValorVenta,PrecioVenta,Estado,Cliente_Codigo)
+VALUES ('FA-001-00004','2015-03-10',334,350,'E',4);
+INSERT INTO [ETNA.DB].dbo.Facturas(NroFactura, FechaFactura,ValorVenta,PrecioVenta,Estado,Cliente_Codigo)
+VALUES ('FA-001-00005','2015-03-11',1300,1350,'E',5);
+
+INSERT INTO [ETNA.DB].dbo.Facturas(NroFactura, FechaFactura,ValorVenta,PrecioVenta,Estado,Cliente_Codigo)
+VALUES ('FA-001-00006','2015-03-08',300.50,350.55,'E',2);
+INSERT INTO [ETNA.DB].dbo.Facturas(NroFactura, FechaFactura,ValorVenta,PrecioVenta,Estado,Cliente_Codigo)
+VALUES ('FA-001-00007','2015-03-09',1000,1350.55,'E',3);
+INSERT INTO [ETNA.DB].dbo.Facturas(NroFactura, FechaFactura,ValorVenta,PrecioVenta,Estado,Cliente_Codigo)
+VALUES ('FA-001-00008','2015-03-09',900.50,950.55,'E',1);
+INSERT INTO [ETNA.DB].dbo.Facturas(NroFactura, FechaFactura,ValorVenta,PrecioVenta,Estado,Cliente_Codigo)
+VALUES ('FA-001-00009','2015-03-10',334,350,'E',4);
+INSERT INTO [ETNA.DB].dbo.Facturas(NroFactura, FechaFactura,ValorVenta,PrecioVenta,Estado,Cliente_Codigo)
+VALUES ('FA-001-00010','2015-03-11',1300,1350,'E',5);
+
+/* SCRIPT INSERCION DETALLES FACTURAS verificar que el Factura_ID generado anteriormente 
+coincida con lo que sale en el script sino cambiar en el primer valor*/ 
+INSERT INTO [ETNA.DB].[dbo].[FacturaDetalles](Factura_Id,Producto_Id)
+VALUES (1,2);
+INSERT INTO [ETNA.DB].[dbo].[FacturaDetalles](Factura_Id,Producto_Id)
+VALUES (1,4);
+INSERT INTO [ETNA.DB].[dbo].[FacturaDetalles](Factura_Id,Producto_Id)
+VALUES (2,3);
+INSERT INTO [ETNA.DB].[dbo].[FacturaDetalles](Factura_Id,Producto_Id)
+VALUES (3,5);
+INSERT INTO [ETNA.DB].[dbo].[FacturaDetalles](Factura_Id,Producto_Id)
+VALUES (4,10);
+/* SCRIPT INSERCION DETALLES FACTURAS verificar que el Factura_ID generado anteriormente 
+coincida con lo que sale en el script sino cambiar en el primer valor*/ 
+INSERT INTO [ETNA.DB].[dbo].[FacturaDetalles](Factura_Id,Producto_Id)
+VALUES (5,2);
+INSERT INTO [ETNA.DB].[dbo].[FacturaDetalles](Factura_Id,Producto_Id)
+VALUES (6,4);
+INSERT INTO [ETNA.DB].[dbo].[FacturaDetalles](Factura_Id,Producto_Id)
+VALUES (7,3);
+INSERT INTO [ETNA.DB].[dbo].[FacturaDetalles](Factura_Id,Producto_Id)
+VALUES (8,5);
+INSERT INTO [ETNA.DB].[dbo].[FacturaDetalles](Factura_Id,Producto_Id)
+VALUES (9,10);
+INSERT INTO [ETNA.DB].[dbo].[FacturaDetalles](Factura_Id,Producto_Id)
+VALUES (10,2);
 
