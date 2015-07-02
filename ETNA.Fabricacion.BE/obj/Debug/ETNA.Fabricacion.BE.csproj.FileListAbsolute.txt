@@ -1,0 +1,4 @@
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Fabricacion.BE\bin\Debug\ETNA.Fabricacion.BE.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Fabricacion.BE\bin\Debug\ETNA.Fabricacion.BE.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Fabricacion.BE\obj\Debug\ETNA.Fabricacion.BE.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Fabricacion.BE\obj\Debug\ETNA.Fabricacion.BE.pdb

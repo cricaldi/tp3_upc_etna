@@ -9,3 +9,14 @@ C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\obj\De
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\ETNA.Domain.dll
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\bin\Debug\ETNA.Domain.pdb
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.DAL\obj\Debug\ETNA.DAL.csprojResolveAssemblyReference.cache
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.DAL\bin\Debug\ETNA.DAL.dll.config
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.DAL\bin\Debug\ETNA.DAL.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.DAL\bin\Debug\ETNA.DAL.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.DAL\bin\Debug\EntityFramework.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.DAL\bin\Debug\ETNA.Domain.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.DAL\bin\Debug\ETNA.Domain.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.DAL\bin\Debug\EntityFramework.xml
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.DAL\bin\Debug\es\EntityFramework.resources.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.DAL\obj\Debug\ETNA.DAL.csprojResolveAssemblyReference.cache
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.DAL\obj\Debug\ETNA.DAL.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.DAL\obj\Debug\ETNA.DAL.pdb

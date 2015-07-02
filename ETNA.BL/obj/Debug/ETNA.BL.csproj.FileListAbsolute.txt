@@ -12,3 +12,21 @@ C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.BL\obj\Deb
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.BL\obj\Debug\ETNA.BL.pdb
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.BL\bin\Debug\ETNA.Common.dll
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.BL\bin\Debug\ETNA.Common.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.BL.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.BL.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\EntityFramework.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.Common.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.DAL.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.Domain.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.Fabricacion.BE.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.Fabricacion.Datos.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.Common.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.DAL.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.Domain.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.Fabricacion.BE.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\ETNA.Fabricacion.Datos.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\EntityFramework.xml
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\bin\Debug\es\EntityFramework.resources.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\obj\Debug\ETNA.BL.csprojResolveAssemblyReference.cache
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\obj\Debug\ETNA.BL.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.BL\obj\Debug\ETNA.BL.pdb

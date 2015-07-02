@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestra.master.cs" Inherits="PresentationLayer.PaginaMaestra" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta charset='utf-8'/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- SCRIPTS PARA LOS ESTILOS !-->
+    <link href="Style/styles.css" rel="stylesheet" />    
+    <script src="Scripts/jquery-latest.min.js"></script>
+    <script src="Scripts/script.js"></script>
+    <!-- SCRIPTS PARA LOS ESTILOS !-->
+
+    <!-- SCRIPTS PARA EL DETALLE !-->
+     <link href="Style/Menu_new.css" rel="stylesheet" />
+    <script src="Scripts/jquery-ui-1.8.17.custom/development-bundle/jquery-1.7.1.js"></script>
+    <link href="Scripts/jquery-ui-1.8.17.custom/css/ui-lightness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+    <script src="Scripts/jquery-ui-1.8.17.custom/js/jquery-1.7.1.min.js"></script>
+    <script src="Scripts/jquery-ui-1.8.17.custom/js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="Scripts/jquery-ui-1.8.17.custom/js/jquery.ui.timepicker.js"></script>  
+     <!-- SCRIPTS PARA EL DETALLE - FIN !-->
+
+     <!-- SCRIPTS PARA LOS MENSAJES !-->
+    <script src="Scripts/ScriptsFabricacionDetalle.js"></script>
+    <!-- SCRIPTS PARA LOS MENSAJES !-->
+
+     <!-- SCRIPTS PARA EL AJAX !-->
+    <script src="Scripts/json2.js"></script>
+     <!-- SCRIPTS PARA EL AJAX !-->
+
+    <style type="text/css">
+        .auto-style4 {
+            width: 660px;
+        }
+        .auto-style5 {
+            width: 659px;
+        }
+    </style>
+
+   <title>ETNA - ERP</title>   
+    
+</head>
+<body>
+    <div style="width:100%; float:left">
+<div id='cssmenu' style="width:20%; float:left">
+<ul>
+   <li class='active'><a href='#'><span style="color:white">ETNA&nbsp;&nbsp;&nbsp; </span></a></li>
+   <li class='has-sub'><a href='#'><span>Fabricacion</span></a>
+      <ul>
+         <li><a href='ListadoSolicitudProduccion.aspx?codigoEstado=1'><span>Validar Solicitud de Producción</span></a></li>
+         <li><a href='ListadoSolicitudProduccion.aspx?codigoEstado=3'><span>Aprobar Solicitud de Produccion</span></a></li>      
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Exportacion</span></a>
+     
+   </li>
+   <li class='last'><a href='#'><span>Logistica</span></a></li>
+</ul>
+</div>
+   
+  
+<div style="width:80%; float:left; padding-top:4%; height: 5px;" class="div_masterPage">
+
+        
+</div>
+          
+<div style="width:80%; float:left; ">   
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
+        </asp:ContentPlaceHolder>
+</div>
+
+        </div>
+</body>
+</html>
+

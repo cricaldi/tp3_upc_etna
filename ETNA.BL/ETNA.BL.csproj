@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FB\GestorLotes.cs" />
+    <Compile Include="FB\SolicitudProduccionBL.cs" />
     <Compile Include="LO\GestorAlmacenes.cs" />
     <Compile Include="LO\GestorEmpleados.cs" />
     <Compile Include="LO\GestorGuiasEntrada.cs" />
@@ -68,6 +69,14 @@
     <ProjectReference Include="..\ETNA.Domain\ETNA.Domain.csproj">
       <Project>{25235949-3740-407a-9cfc-3a1af58c18e3}</Project>
       <Name>ETNA.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ETNA.Fabricacion.BE\ETNA.Fabricacion.BE.csproj">
+      <Project>{dba02c78-7731-4854-9a6a-4db80e3c0989}</Project>
+      <Name>ETNA.Fabricacion.BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ETNA.Fabricacion.Datos\ETNA.Fabricacion.Datos.csproj">
+      <Project>{035da583-8bc2-4c51-804c-be6e1d0d16d9}</Project>
+      <Name>ETNA.Fabricacion.Datos</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

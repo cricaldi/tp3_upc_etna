@@ -1,0 +1,5 @@
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Fabricacion.Datos\obj\Debug\ETNA.Fabricacion.Datos.csprojResolveAssemblyReference.cache
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Fabricacion.Datos\bin\Debug\ETNA.Fabricacion.Datos.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Fabricacion.Datos\bin\Debug\ETNA.Fabricacion.Datos.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Fabricacion.Datos\obj\Debug\ETNA.Fabricacion.Datos.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Fabricacion.Datos\obj\Debug\ETNA.Fabricacion.Datos.pdb

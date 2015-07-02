@@ -2,3 +2,7 @@ C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.Domain\bin
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.Domain\bin\Debug\ETNA.Domain.pdb
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.Domain\obj\Debug\ETNA.Domain.dll
 C:\Users\DiegoMartín\Documents\Visual Studio 2012\Projects\ETNA\ETNA.Domain\obj\Debug\ETNA.Domain.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Domain\bin\Debug\ETNA.Domain.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Domain\bin\Debug\ETNA.Domain.pdb
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Domain\obj\Debug\ETNA.Domain.dll
+E:\PROYECTOS\TP3\tp3_upc_etna\ETNA.Domain\obj\Debug\ETNA.Domain.pdb
