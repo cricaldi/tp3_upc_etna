@@ -6,9 +6,9 @@ namespace DataLayer
 {
     public class SolicitudProduccionDAO
     {
-        static readonly ConexionDAO Cn = new ConexionDAO();
+        //static readonly ConexionDAO Cn = new ConexionDAO();
 
-        readonly SqlConnection _objCn = Cn.Conecta();
+        readonly SqlConnection _objCn = ConexionDAO.getInstance();
 
         public DataTable GetSolicitudesProduccion(string codEstado)
         {

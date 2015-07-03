@@ -11,10 +11,21 @@ namespace DataLayer
     public class ConexionDAO
     {
         
-        SqlConnection cn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["cn"].ConnectionString);
+        //SqlConnection cn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["cn"].ConnectionString);
 
-        public    SqlConnection Conecta() 
+        private static SqlConnection cn;
+
+        private ConexionDAO()
         {
+            
+        }
+
+       
+        public static  SqlConnection getInstance() 
+        {
+            if (cn == null)
+                cn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["cn"].ConnectionString);
+
             return cn;
         }
 

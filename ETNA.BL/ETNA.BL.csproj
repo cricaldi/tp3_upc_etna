@@ -48,6 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FB\GestorLotes.cs" />
+    <Compile Include="FB\MotivoRechazoBL.cs" />
+    <Compile Include="FB\OrdenTrabajoBL.cs" />
+    <Compile Include="FB\ParteProduccionBL.cs" />
+    <Compile Include="FB\SolicitudInsumosBL.cs" />
     <Compile Include="FB\SolicitudProduccionBL.cs" />
     <Compile Include="LO\GestorAlmacenes.cs" />
     <Compile Include="LO\GestorEmpleados.cs" />
