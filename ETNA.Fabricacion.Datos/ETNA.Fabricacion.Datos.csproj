@@ -41,7 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionDAO.cs" />
+    <Compile Include="OrdenTrabajoDAO.cs" />
+    <Compile Include="ParteProduccionDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolicitudInsumosDAO.cs" />
     <Compile Include="SolicitudProduccionDAO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
